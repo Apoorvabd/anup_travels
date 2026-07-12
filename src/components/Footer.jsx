@@ -10,40 +10,38 @@ import {
   FaInstagram,
   FaTwitter,
 } from "react-icons/fa";
-import { useRef } from "react";
 import emailjs from "@emailjs/browser";
 
+// EmailJS config (public keys are safe for frontend usage)
+const EMAILJS_SERVICE_ID = "service_omgk452";
+const EMAILJS_TEMPLATE_ID = "template_7p52584";
+const EMAILJS_PUBLIC_KEY = "Ytl72TKXvj-HQbJaa6";
 
- const handleSubmit = async (e) => {
+
+const handleSubmit = async (e) => {
   e.preventDefault();
 
   const form = e.target;
 
-  const templateParams = {
-    name: form.name.value,
-    email: form.email.value,
-    phone: form.phone.value,
-    from: form.from.value,
-    destination: form.destination.value,
-    travel_date: form.travel_date.value,
-    travelers: form.travelers.value,
-    message: form.message.value,
-  };
-
   try {
-    await emailjs.send(
+    await emailjs.sendForm(
       "service_omgk452",
       "template_7p52584",
-      templateParams,
-      "Ytl72TKXvj-HQbJaa6"
+      form,
+      "PhNcpRIVyw8NMcdVZ"
     );
 
     alert("✅ Inquiry Sent Successfully!");
 
     form.reset();
+
   } catch (error) {
-    console.error(error);
-    alert("❌ Failed to send inquiry.");
+    console.error("EmailJS Error:", error);
+
+    alert(
+      "❌ Failed to send inquiry. " +
+      (error?.text || "Please try again.")
+    );
   }
 };
 const ContactFooter = () => {

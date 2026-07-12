@@ -8,7 +8,7 @@ const testimonials = [
     role: "Regular Traveler",
     image: "favicon.svg",
     review:
-      "We booked a bus for our family trip, and the entire experience was smooth from booking to the destination. The bus was clean, comfortable, and the staff was very cooperative",
+    "Family trip ke liye bus booking ka experience amazing raha. Booking process se lekar final destination tak sab kuch perfectly managed tha. Bus comfortable, clean aur well-maintained thi, aur staff ka behaviour bhi bahut friendly tha. Definitely ek baar phir travel karna pasand karenge.",
     featured: true,
   },
   {

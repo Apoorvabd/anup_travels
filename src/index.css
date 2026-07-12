@@ -1,6 +1,11 @@
-@tailwind base;
+h@tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Smooth scrolling for anchor navigation */
+html {
+  scroll-behavior: smooth;
+}
 
 /* Theme system (light/dark) */
 html[data-theme="light"] {

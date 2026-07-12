@@ -103,6 +103,28 @@ const Hero = () => {
           >
             <motion.a
               href="#contact"
+              onClick={(e) => {
+                e.preventDefault();
+                const el = document.getElementById("contact");
+                if (!el) return;
+
+                const y = el.getBoundingClientRect().top + window.scrollY - 80; // offset
+                // slow scroll (simple ease)
+                const start = window.scrollY;
+                const diff = y - start;
+                const duration = 900; // ms
+                let t0 = null;
+
+                const step = (ts) => {
+                  if (t0 === null) t0 = ts;
+                  const p = Math.min(1, (ts - t0) / duration);
+                  const eased = 1 - Math.pow(1 - p, 3);
+                  window.scrollTo(0, start + diff * eased);
+                  if (p < 1) requestAnimationFrame(step);
+                };
+
+                requestAnimationFrame(step);
+              }}
               className="group flex items-center rounded-xl bg-amber-400 px-7 py-4 font-semibold text-black transition-all duration-300 hover:scale-105 hover:bg-amber-300"
               whileHover={{ y: -2, transition: { duration: 0.25, ease: "easeOut" } }}
               transition={{ duration: 0.25, ease: "easeOut" }}

@@ -18,17 +18,17 @@ const highlights = [
 
 const stats = [
   {
-    value: "XX+",
+    value: "12+",
     label: "Years Experience",
     icon: Clock3,
   },
   {
-    value: "XXXX+",
+    value: "456+",
     label: "Trips Completed",
     icon: Bus,
   },
   {
-    value: "XXXXX+",
+    value: "1200+",
     label: "Happy Customers",
     icon: Users,
   },
@@ -110,8 +110,8 @@ export default function About() {
 
         <motion.div
           animate={{
-            x: [0, 80, 0],
-            y: [0, -50, 0],
+            x: [0, 800, 0],
+            y: [0, -500, 0],
           }}
           transition={{
             duration: 12,
@@ -122,7 +122,7 @@ export default function About() {
 
         <motion.div
           animate={{
-            x: [0, -70, 0],
+            x: [0, -100, 0],
             y: [0, 60, 0],
           }}
           transition={{
@@ -140,9 +140,9 @@ export default function About() {
 
         <motion.div
           variants={item}
-          className="mb-16 max-w-2xl"
+          className="mb-16 max-w-2xl "
         >
-          <span className="inline-flex rounded-full border border-amber-500/30 bg-amber-500/10 px-4 py-2 text-sm font-semibold text-amber-300">
+          <span className="inline-flex rounded-full border border-amber-500/30 bg-amber-500/10 px-4 py-2 text-md font-semibold text-amber-300 sm:ml-96 mb-3 mt-0">
             About Us
           </span>
 
@@ -154,9 +154,8 @@ export default function About() {
 
           <p className="mt-6 text-lg leading-8 text-neutral-400">
             {/* TODO */}
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Replace this paragraph with your company story and travel
-            philosophy.
+            Experience safe, comfortable, and reliable bus journeys with premium
+  services designed to make every trip smooth, relaxing, and memorable.
           </p>
         </motion.div>
 
@@ -203,7 +202,7 @@ export default function About() {
               className="absolute bottom-8 -right-4 w-64 rounded-3xl border border-neutral-700 bg-neutral-900/90 p-6 backdrop-blur-xl shadow-2xl lg:-right-10"
             >
               <p className="text-5xl font-bold text-amber-400">
-                XX+
+                12+
               </p>
 
               <p className="mt-2 text-lg font-semibold text-white">
