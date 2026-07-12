@@ -1,0 +1,200 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Theme system (light/dark) */
+html[data-theme="light"] {
+  --bg: #ffffff;
+  --text: #0f172a;
+  --muted: #475569;
+  --surface: #f8fafc;
+  --surface-2: #ffffff;
+  --border: rgba(15, 23, 42, 0.12);
+}
+
+html[data-theme="dark"] {
+  --bg: #0b1220;
+  --text: #e5e7eb;
+  --muted: #9ca3af;
+  --surface: #0f172a;
+  --surface-2: #0b1220;
+  --border: rgba(229, 231, 235, 0.12);
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-width: 320px;
+  min-height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+  background: var(--bg);
+  color: var(--text);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img,
+svg {
+  max-width: 100%;
+}
+
+@font-face {
+  font-family: "Gerbil";
+  src: url("/fonts/Gerbil.ttf") format("truetype");
+}
+
+.gerbil-font {
+  font-family: "Gerbil", sans-serif;
+}
+
+/* Shared themed borders */
+.border-theme {
+  border-color: var(--border);
+}
+
+.counter:hover {
+  border-color: var(--accent-border);
+}
+
+
+.counter:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Light mode overrides (keep existing dark visuals as default) */
+html[data-theme="light"] body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* These override the most common hardcoded dark classes used in anoop_components
+   so that light mode actually looks usable without editing every JSX file. */
+html[data-theme="light"] .bg-slate-950,
+html[data-theme="light"] .bg-slate-900,
+html[data-theme="light"] .bg-neutral-900,
+html[data-theme="light"] .bg-neutral-700,
+html[data-theme="light"] .bg-slate-800 {
+  background-color: rgba(255, 247, 214, 0.98) !important;
+}
+
+html[data-theme="light"] .text-white,
+html[data-theme="light"] .text-neutral-100,
+html[data-theme="light"] .text-neutral-200,
+html[data-theme="light"] .text-gray-200,
+html[data-theme="light"] .text-gray-300,
+html[data-theme="light"] .text-gray-400,
+html[data-theme="light"] .text-neutral-300,
+html[data-theme="light"] .text-gray-500,
+html[data-theme="light"] .text-neutral-500 {
+  color: #111827 !important;
+}
+
+/* Form elements light mode styling */
+html[data-theme="light"] form input,
+html[data-theme="light"] form textarea {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+  border: 1px solid rgba(15, 23, 42, 0.15) !important;
+}
+
+html[data-theme="light"] form input::placeholder,
+html[data-theme="light"] form textarea::placeholder {
+  color: #64748b !important;
+}
+
+html[data-theme="light"] form input[type="date"] {
+  color-scheme: light !important;
+}
+
+html[data-theme="light"] form button[type="submit"] {
+  color: #ffffff !important;
+}
+
+html[data-theme="light"] .border-slate-800,
+
+html[data-theme="light"] .border-neutral-800,
+html[data-theme="light"] .border-neutral-900,
+html[data-theme="light"] .border-neutral-200,
+html[data-theme="light"] .border-white\/10 {
+  border-color: rgba(15, 23, 42, 0.12) !important;
+}
+
+/* Testimonials Section light mode overrides */
+html[data-theme="light"] #testimonials .bg-neutral-900,
+html[data-theme="light"] #testimonials .bg-neutral-900\/90 {
+  background-color: #ffffff !important;
+  border-color: rgba(15, 23, 42, 0.08) !important;
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.05) !important;
+}
+
+html[data-theme="light"] #testimonials p.text-neutral-100,
+html[data-theme="light"] #testimonials p.text-neutral-200,
+html[data-theme="light"] #testimonials p.text-neutral-600,
+html[data-theme="light"] #testimonials .text-neutral-100,
+html[data-theme="light"] #testimonials .text-neutral-200 {
+  color: #475569 !important;
+}
+
+html[data-theme="light"] #testimonials h4.text-white,
+html[data-theme="light"] #testimonials h4.text-neutral-900,
+html[data-theme="light"] #testimonials p.text-white {
+  color: #0f172a !important;
+}
+
+html[data-theme="light"] #testimonials p.text-yellow-100 {
+  color: #b45309 !important;
+}
+
+html[data-theme="light"] #testimonials .bg-white\/10 {
+  background-color: rgba(15, 23, 42, 0.05) !important;
+}
+
+html[data-theme="light"] #testimonials .bg-white\/10 svg {
+  color: #0f172a !important;
+}
+
+/* Journey Section light mode overrides */
+html[data-theme="light"] #journey .bg-neutral-900\/70 {
+  background-color: #ffffff !important;
+  border-color: rgba(15, 23, 42, 0.08) !important;
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.05) !important;
+}
+
+html[data-theme="light"] #journey h3.text-white {
+  color: #0f172a !important;
+}
+
+html[data-theme="light"] #journey p.text-neutral-400 {
+  color: #475569 !important;
+}
+
+html[data-theme="light"] #journey .bg-neutral-800 {
+  background-color: rgba(15, 23, 42, 0.1) !important;
+}
+
+html[data-theme="light"] #journey .border-neutral-950 {
+  border-color: #ffffff !important;
+}
+
+/* Journey CTA Box light mode overrides */
+html[data-theme="light"] .journey-cta-box {
+  background-image: linear-gradient(to right, #ffffff, rgba(254, 243, 199, 0.4), #ffffff) !important;
+  border-color: rgba(15, 23, 42, 0.08) !important;
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.05) !important;
+}
+
+html[data-theme="light"] .journey-cta-box h3 {
+  color: #0f172a !important;
+}
+
+html[data-theme="light"] .journey-cta-box p {
+  color: #475569 !important;
+}
