@@ -11,11 +11,13 @@ import {
   FaTwitter,
 } from "react-icons/fa";
 import emailjs from "@emailjs/browser";
+import { motion, useReducedMotion } from "framer-motion";
 
 // EmailJS config (public keys are safe for frontend usage)
 const EMAILJS_SERVICE_ID = "service_omgk452";
 const EMAILJS_TEMPLATE_ID = "template_7p52584";
 const EMAILJS_PUBLIC_KEY = "Ytl72TKXvj-HQbJaa6";
+
 
 
 const handleSubmit = async (e) => {
@@ -45,8 +47,29 @@ const handleSubmit = async (e) => {
   }
 };
 const ContactFooter = () => {
+  const reduceMotion = useReducedMotion();
+
+  const reveal = {
+    hidden: { opacity: 0, y: 18 },
+    show: { opacity: 1, y: 0, transition: { duration: 0.7, ease: "easeOut" } },
+  };
+
+  const micro = reduceMotion
+    ? {}
+    : {
+        y: [0, -6, 0],
+        transition: { duration: 10, ease: "easeInOut", repeat: Infinity, repeatType: "mirror" },
+      };
+
   return (
-    <section id="contact" className="bg-slate-950 text-white pt-20">
+    <motion.section
+      id="contact"
+      className="bg-slate-950 text-white pt-20"
+      variants={reveal}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, amount: 0.25 }}
+    >
       <div className="max-w-7xl mx-auto px-6">
 
         {/* Heading */}
@@ -343,7 +366,7 @@ const ContactFooter = () => {
         </div>
 
       </div>
-    </section>
+    </motion.section  >
   );
 };
 

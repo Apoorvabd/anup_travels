@@ -1,17 +1,148 @@
+import { useEffect, useMemo, useRef } from "react";
 import { ArrowRight, Phone } from "lucide-react";
-import { motion } from "framer-motion";
+import {
+  motion,
+  useReducedMotion,
+  useMotionValue,
+  useSpring,
+  useTransform,
+} from "framer-motion";
 import { variants } from "./motionVariants";
 
-import { ThemeToggle } from './Theme.jsx';
-
 const Hero = () => {
+  const heroRef = useRef(null);
+  const reduceMotion = useReducedMotion();
+
+  // Premium subtle parallax (mouse movement -> small translate)
+  const mouseX = useMotionValue(0);
+  const mouseY = useMotionValue(0);
+  const springX = useSpring(mouseX, { stiffness: 120, damping: 18, mass: 0.6 });
+  const springY = useSpring(mouseY, { stiffness: 120, damping: 18, mass: 0.6 });
+
+  const imgParallaxX = useTransform(springX, [-1, 1], [-18, 18]);
+  const imgParallaxY = useTransform(springY, [-1, 1], [-10, 10]);
+  const blobParallaxX = useTransform(springX, [-1, 1], [-10, 10]);
+  const blobParallaxY = useTransform(springY, [-1, 1], [-8, 8]);
+
+  useEffect(() => {
+    if (reduceMotion) return;
+
+    const el = heroRef.current;
+    if (!el) return;
+
+    let rafId = 0;
+    const onMove = (e) => {
+      if (rafId) return;
+      rafId = window.requestAnimationFrame(() => {
+        rafId = 0;
+        const rect = el.getBoundingClientRect();
+        const cx = rect.left + rect.width / 2;
+        const cy = rect.top + rect.height / 2;
+        const nx = (e.clientX - cx) / (rect.width / 2);
+        const ny = (e.clientY - cy) / (rect.height / 2);
+        mouseX.set(Math.max(-1, Math.min(1, nx)));
+        mouseY.set(Math.max(-1, Math.min(1, ny)));
+      });
+    };
+
+    const onLeave = () => {
+      mouseX.set(0);
+      mouseY.set(0);
+    };
+
+    window.addEventListener("mousemove", onMove, { passive: true });
+    window.addEventListener("mouseleave", onLeave);
+
+    return () => {
+      if (rafId) window.cancelAnimationFrame(rafId);
+      window.removeEventListener("mousemove", onMove);
+      window.removeEventListener("mouseleave", onLeave);
+    };
+  }, [reduceMotion, mouseX, mouseY]);
+
+  const entrance = useMemo(() => {
+    return {
+      heading: {
+        hidden: { opacity: 0, y: 26 },
+        show: {
+          opacity: 1,
+          y: 0,
+          transition: { type: "spring", stiffness: 90, damping: 18, mass: 0.6 },
+        },
+      },
+      subtitle: {
+        hidden: { opacity: 0, y: 12 },
+        show: {
+          opacity: 1,
+          y: 0,
+          transition: { duration: 0.65, ease: "easeOut", delay: 0.22 },
+        },
+      },
+      cta: {
+        hidden: { opacity: 0, scale: 0.98, y: 10 },
+        show: {
+          opacity: 1,
+          scale: 1,
+          y: 0,
+          transition: { duration: 0.6, ease: "easeOut", delay: 0.32 },
+        },
+      },
+      image: {
+        hidden: { opacity: 0, x: -70 },
+        show: {
+          opacity: 1,
+          x: 0,
+          transition: { duration: 1.05, ease: "easeOut" },
+        },
+      },
+      floatSlow: {
+        y: reduceMotion ? 0 : [0, -10, 0],
+        transition: reduceMotion
+          ? { duration: 0 }
+          : { duration: 12, ease: "easeInOut", repeat: Infinity, repeatType: "mirror" },
+      },
+      particleFloat: (delay = 0, duration = 10) => ({
+        y: reduceMotion ? 0 : [-6, 6],
+        opacity: reduceMotion ? 0.25 : [0.0, 0.25, 0.0],
+        transition: reduceMotion
+          ? { duration: 0 }
+          : { delay, duration, ease: "easeInOut", repeat: Infinity, repeatType: "mirror" },
+      }),
+      scrollReveal: {
+        hidden: { opacity: 0, y: 18 },
+        show: { opacity: 1, y: 0, transition: { duration: 0.7, ease: "easeOut" } },
+      },
+    };
+  }, [reduceMotion]);
+
   return (
     <motion.section
-        className="relative h-screen w-full overflow-hidden"
-        initial="hidden"
-        animate="show"
-      >
+      ref={heroRef}
+      className="relative h-screen w-full overflow-hidden"
+      initial="hidden"
+      animate="show"
+    >
       
+      {/* Premium background particles (lightweight) */}
+      <motion.div
+        aria-hidden
+        className="pointer-events-none absolute left-10 top-28 h-2 w-2 rounded-full bg-white/20 blur-[0.5px]"
+        initial={{ opacity: 0 }}
+        animate={entrance.particleFloat(0.1, 10)}
+      />
+      <motion.div
+        aria-hidden
+        className="pointer-events-none absolute right-16 top-36 h-2.5 w-2.5 rounded-full bg-amber-300/25 blur-[0.5px]"
+        initial={{ opacity: 0 }}
+        animate={entrance.particleFloat(0.6, 12)}
+      />
+      <motion.div
+        aria-hidden
+        className="pointer-events-none absolute left-1/3 bottom-28 h-2 w-2 rounded-full bg-white/15 blur-[0.5px]"
+        initial={{ opacity: 0 }}
+        animate={entrance.particleFloat(0.35, 11)}
+      />
+
       {/* ================================
 
             HERO IMAGE
@@ -19,12 +150,21 @@ const Hero = () => {
       ================================= */}
 
       <motion.img
-        src="hero.png" // TODO: Replace with your hero image
+        src="/hero.png"
         alt="Anoop Tour & Travels"
         className="absolute inset-0 h-full w-full object-cover"
-        variants={variants.kenBurnsOnce}
-        initial="initial"
-        animate="animate"
+        variants={entrance.image}
+        initial="hidden"
+        animate="show"
+        style={{ x: imgParallaxX, y: imgParallaxY }}
+        // subtle continuous float (premium)
+        transition={{
+          duration: reduceMotion ? 0 : 12,
+          ease: "easeInOut",
+          repeat: reduceMotion ? 0 : Infinity,
+          repeatType: "mirror",
+        }}
+        animate={reduceMotion ? "show" : { ...entrance.image.show, y: [0, -10, 0] }}
       />
 
       {/* Overlay */}
@@ -54,11 +194,11 @@ const Hero = () => {
 
           {/* Heading */}
 
-          <motion.h1
+      <motion.h1
             className="text-5xl font-extrabold leading-tight text-white md:text-7xl"
-            initial={{ opacity: 0, y: 18 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.75, ease: "easeOut" }}
+            variants={entrance.heading}
+            initial="hidden"
+            animate="show"
           >
             <motion.span
               style={{ display: "inline-block" }}
@@ -84,9 +224,9 @@ const Hero = () => {
 
           <motion.p
             className="mt-8 max-w-2xl text-lg leading-8 text-gray-200 md:text-xl"
-            initial={{ opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.75, ease: "easeOut", delay: 0.1 }}
+            variants={entrance.subtitle}
+            initial="hidden"
+            animate="show"
           >
             {/* TODO */}
             Travel with comfort, safety, and reliability.
@@ -97,12 +237,15 @@ const Hero = () => {
 
           <motion.div
             className="mt-10 flex flex-wrap gap-5"
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.85, ease: "easeOut", delay: 0.18 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.4, ease: "easeOut", delay: 0.28 }}
           >
             <motion.a
               href="#contact"
+              variants={entrance.cta}
+              initial="hidden"
+              animate="show"
               onClick={(e) => {
                 e.preventDefault();
                 const el = document.getElementById("contact");
@@ -138,6 +281,9 @@ const Hero = () => {
 
             <motion.a
               href="tel:+919415797892"
+              variants={entrance.cta}
+              initial="hidden"
+              animate="show"
               className="flex items-center rounded-xl border border-white/20 bg-white/10 px-7 py-4 font-semibold text-white backdrop-blur transition-all duration-300 hover:bg-white hover:text-black"
               whileHover={{ y: -2, transition: { duration: 0.25, ease: "easeOut" } }}
               transition={{ duration: 0.25, ease: "easeOut" }}
@@ -151,9 +297,11 @@ const Hero = () => {
 
           <motion.div
             className="mt-16 grid grid-cols-2 gap-8 md:grid-cols-4"
-            initial={{ opacity: 0, y: 18 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.75, ease: "easeOut", delay: 0.2 }}
+            variants={entrance.scrollReveal}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.25 }}
+            transition={{ duration: 0.7, ease: "easeOut" }}
           >
             <div>
               <h2 className="text-3xl font-bold text-amber-400">12+</h2>
