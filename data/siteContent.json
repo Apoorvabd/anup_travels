@@ -1,0 +1,394 @@
+{
+  "seo": {
+    "siteUrl": "TODO: Replace with actual production domain, e.g. https://www.panditji-example.com",
+    "hi": {
+      "title": "पंडित जी | वैदिक अनुष्ठान एवं ज्योतिष परामर्श — अकबरपुर, कानपुर देहात",
+      "description": "पारंपरिक वैदिक अनुष्ठान, संस्कार, पूजा एवं ज्योतिष परामर्श — श्रद्धा और विधि के साथ। अकबरपुर, कानपुर देहात, उत्तर प्रदेश।",
+      "keywords": [
+        "पंडित जी अकबरपुर",
+        "कानपुर देहात पंडित",
+        "वैदिक पूजा",
+        "कर्मकांड",
+        "ज्योतिष परामर्श",
+        "गृह प्रवेश पूजा",
+        "विवाह संस्कार",
+        "रुद्राभिषेक",
+        "सत्यनारायण कथा",
+        "हवन यज्ञ"
+      ]
+    },
+    "en": {
+      "title": "Pandit Ji | Vedic Rituals & Jyotish Consultation — Akbarpur, Kanpur Dehat",
+      "description": "Traditional Vedic rituals, Hindu sanskar, puja and Jyotish consultation delivered with sincerity and proper vidhi. Akbarpur, Kanpur Dehat, Uttar Pradesh.",
+      "keywords": [
+        "Pandit Akbarpur",
+        "Kanpur Dehat Pandit Ji",
+        "Vedic puja services",
+        "Jyotish consultation",
+        "Griha Pravesh puja",
+        "Vivah Sanskar",
+        "Rudrabhishek",
+        "Satyanarayan Katha",
+        "Havan Yajna",
+        "Kundli astrologer near me"
+      ]
+    }
+  },
+  "brand": {
+    "name": {
+      "hi": "डॉ. अरविंद कुमार चतुर्वेदी",
+      "en": "Dr Arvind Kumar Chaturvedi"
+    },
+    "tagline": {
+      "hi": "परंपरा में विश्वास, विधि में शुद्धता, सेवा में सरलता।",
+      "en": "Rooted in tradition, guided by Vedic knowledge, delivered with sincerity."
+    },
+    "location": {
+      "hi": "अकबरपुर, कानपुर देहात, उत्तर प्रदेश",
+      "en": "Akbarpur, Kanpur Dehat, Uttar Pradesh"
+    }
+  },
+  "navigation": {
+    "links": [
+      { "id": "home", "hi": "होम", "en": "Home", "href": "#home" },
+      { "id": "about", "hi": "परिचय", "en": "About", "href": "#about" },
+      { "id": "services", "hi": "सेवाएँ", "en": "Services", "href": "#services" },
+      { "id": "rituals", "hi": "कर्मकांड", "en": "Rituals", "href": "#rituals" },
+      { "id": "jyotish", "hi": "ज्योतिष", "en": "Jyotish", "href": "#jyotish" },
+      { "id": "process", "hi": "प्रक्रिया", "en": "Process", "href": "#process" },
+      { "id": "faq", "hi": "प्रश्न", "en": "FAQ", "href": "#faq" },
+      { "id": "contact", "hi": "संपर्क", "en": "Contact", "href": "#contact" }
+    ],
+    "cta": { "hi": "परामर्श के लिए संपर्क करें", "en": "Book a Consultation" },
+    "languageLabel": { "hi": "भाषा", "en": "Language" }
+  },
+  "hero": {
+    "eyebrow": {
+      "hi": "ॐ शुभं करोति कल्याणम् || श्री शिवसरोवरधामाय नमः || ॐ ऐं ह्रीं क्लीं चामुण्डायै विच्चे",
+      "en": "Vedic Tradition • Rituals • Jyotish"
+    },
+    "title": {
+      "hi": "आस्था, संस्कार और वैदिक परंपरा आपके हर शुभ अवसर के साथ।",
+      "en": "Reconnect with tradition.\nGive your life's sacred moments\nthe meaning they deserve."
+    },
+    "description": {
+      "hi": "गृह प्रवेश से लेकर विवाह संस्कार तक, हर अनुष्ठान शुद्ध विधि, श्रद्धा और स्पष्ट मार्गदर्शन के साथ सम्पन्न किया जाता है — ताकि आपके परिवार के लिए हर क्षण सार्थक बने।",
+      "en": "From Griha Pravesh to Vivah Sanskar, every ceremony is conducted with proper vidhi, sincerity and clear guidance — so each moment stays meaningful for your family."
+    },
+    "primaryCta": { "hi": "परामर्श के लिए संपर्क करें", "en": "Book a Consultation" },
+    "secondaryCta": { "hi": "सेवाएँ देखें", "en": "View Services" },
+    "trustLine": { "hi": "", "en": "" }
+  },
+  "intro": {
+    "statement": {
+      "hi": "हर संस्कार केवल एक अनुष्ठान नहीं,\nएक स्मृति है।",
+      "en": "Every sanskar is not just a ritual —\nit is a memory in the making."
+    },
+    "body": {
+      "hi": "पूजा और संस्कार केवल औपचारिकता नहीं हैं — ये परिवार की आस्था और परंपरा को अगली पीढ़ी तक पहुँचाने का माध्यम हैं। इसलिए हर अनुष्ठान को उचित विधि, स्पष्ट संवाद और पूर्ण श्रद्धा के साथ सम्पन्न किया जाता है, जिससे वह क्षण आपके परिवार की स्मृतियों में सदा के लिए बस जाए।",
+      "en": "A puja or sanskar is never a mere formality — it is how a family's faith and tradition are carried forward. That is why every ceremony is conducted with correct vidhi, clear communication and complete sincerity, so the moment stays with your family long after it is over."
+    }
+  },
+  "about": {
+    "eyebrow": { "hi": "परिचय", "en": "About Pandit Ji" },
+    "title": {
+      "hi": "डॉ. अरविंद कुमार चतुर्वेदी ,\n प्राचार्य श्रीमती रामादेवी महाविद्यालय ",
+      "en": "Traditional knowledge,\nwith personal guidance."
+    },
+    "body": {
+      "hi": "डॉ. अरविंद कुमार चतुर्वेदी एक अनुभवी वैदिक आचार्य एवं ज्योतिष विशेषज्ञ हैं, जिन्हें 22 वर्षों से अधिक का कर्मकांड, वैदिक अनुष्ठानों एवं धार्मिक संस्कारों का अनुभव प्राप्त है। उन्होंने संपूर्णानंद संस्कृत विश्वविद्यालय से पीएच.डी. की उपाधि प्राप्त की है और वैदिक परंपराओं एवं शास्त्रीय विधियों का गहन अध्ययन किया है। \nउनकी कार्यशैली में शास्त्रोक्त विधि, अनुशासन, सरल व्यवहार और प्रत्येक परिवार की आवश्यकताओं के अनुसार अनुष्ठान की उचित व्यवस्था को विशेष महत्व दिया जाता है.",
+      "en": "## Dr. Arvind Kumar Chaturvedi\n\nDr. Arvind Kumar Chaturvedi is an experienced Vedic Acharya and Jyotish expert with more than 22 years of experience in Vedic rituals, religious ceremonies, traditional संस्कारs, and spiritual practices. He holds a Ph.D. from Sampurnanand Sanskrit University and has pursued extensive academic and traditional study of Sanskrit, Vedic traditions, and Shastric practices.\n\nHe comes from a family with a long-standing Vedic and religious tradition, which has been passed down through generations. Continuing this tradition, he performs a wide range of Vedic rituals, Mahayagnas, Shanti Puja, religious ceremonies, and traditional संस्कारs. His approach focuses on conducting every ritual with proper विधि, श्रद्धा, discipline, and adherence to traditional Shastric practices.\n\nTraditional Vedic naming ceremony for newborns.\n* Upanayan (Janeu) Sanskar — Traditional sacred-thread ceremony according to Vedic customs.\n* Vivah Sanskar — Marriage ceremonies conducted according to Vedic traditions and Shastric विधi.\n\n### Academic & Professional Recognition\n\nAlongside his work in the field of Vedic traditions and religious practices, Dr. Arvind Kumar Chaturvedi has also made a significant contribution to the field of education. He has been serving as the Principal of a Degree College for the past 3 years.\n\nHis academic background, knowledge of Sanskrit, and long-standing experience with Vedic traditions allow him to approach religious ceremonies with both traditional understanding and academic depth.\n\nHis approach emphasizes authentic traditional practices, disciplined execution, respectful conduct, and organizing rituals according to the specific requirements of each family and occasion."
+    },
+    "points": [
+      {
+        "hi": "परंपराओं के प्रति सम्मान और पूर्ण विधि-विधान से अनुष्ठान।",
+        "en": "Deep respect for tradition and rituals performed with complete vidhi."
+      },
+      {
+        "hi": "हर परिवार की आवश्यकता के अनुसार व्यक्तिगत परामर्श।",
+        "en": "Personalised consultation tailored to each family's needs."
+      },
+      {
+        "hi": "स्पষ্ট संवाद — सामग्री, समय और प्रक्रिया की पूरी जानकारी पहले से।",
+        "en": "Clear communication — materials, timing and process explained in advance."
+      },
+      {
+        "hi": "परिवार-केंद्रित सेवा, बिना किसी जल्दबाज़ी के।",
+        "en": "Family-oriented service, conducted without haste."
+      }
+    ],
+    "credentialsNote": {
+      "hi": "",
+      "en": ""
+    },
+    "stats": [
+      { "value": "22+", "hi": "वर्षों का अनुभव", "en": "Years of Experience" },
+      { "value": "300+", "hi": "सम्पन्न अनुष्ठान", "en": "Rituals Performed" },
+      { "value": "100+", "hi": "सेवित परिवार", "en": "Families Served" }
+    ]
+  },
+  "services": {
+    "eyebrow": { "hi": "सेवाएँ", "en": "Services" },
+    "title": { "hi": "पूजा, संस्कार एवं ज्योतिष सेवाएँ", "en": "Puja, Sanskar & Jyotish Services" },
+    "description": {
+      "hi": "प्रत्येक सेवा शुद्ध वैदिक विधि के अनुसार सम्पन्न की जाती है। उपलब्धता की पुष्टि परामर्श के समय की जाती है।",
+      "en": "Each service is conducted according to proper Vedic vidhi. Availability is confirmed at the time of consultation."
+    },
+    "items": [
+      { "id": "puja-anushthan", "hi": "पूजा एवं अनुष्ठान", "en": "Puja & Rituals", "available": true },
+      { "id": "karmakand", "hi": "कर्मकांड", "en": "Vedic Ceremonies", "available": true },
+      { "id": "griha-pravesh", "hi": "गृह प्रवेश पूजा", "en": "Griha Pravesh", "available": true },
+      { "id": "vivah-sanskar", "hi": "विवाह संस्कार", "en": "Marriage Ceremonies", "available": true },
+      { "id": "naamkaran", "hi": "नामकरण संस्कार", "en": "Naamkaran", "available": true },
+      { "id": "mundan", "hi": "मुंडन संस्कार", "en": "Mundan Ceremony", "available": true },
+      { "id": "satyanarayan-katha", "hi": "सत्यनारायण कथा", "en": "Satyanarayan Katha", "available": true },
+      { "id": "rudrabhishek", "hi": "रुद्राभिषेक", "en": "Rudrabhishek", "available": true },
+      { "id": "havan-yajna", "hi": "हवन एवं यज्ञ", "en": "Havan & Yajna", "available": true },
+      { "id": "shanti-puja", "hi": "शांति पूजा", "en": "Shanti Puja", "available": true },
+      { "id": "pitru-karma", "hi": "पितृ कर्म", "en": "Pitru Karma", "available": true },
+      { "id": "jyotish-parammarsh", "hi": "ज्योतिष परामर्श", "en": "Jyotish Consultation", "available": true }
+    ]
+  },
+  "rituals": {
+    "eyebrow": { "hi": "कर्मकांड", "en": "Vedic Rituals" },
+    "title": { "hi": "वैदिक संस्कार", "en": "Vedic Sanskar" },
+    "description": {
+      "hi": "जीवन के प्रत्येक महत्वपूर्ण पड़ाव के लिए पारंपरिक संस्कार, उचित विधि और शांत वातावरण में सम्पन्न किए जाते हैं।",
+      "en": "Traditional sanskars for each significant milestone in life, conducted with proper vidhi in a calm and dignified setting."
+    },
+    "items": [
+      {
+        "id": "griha-pravesh",
+        "hi": { "title": "गृह प्रवेश", "description": "नए घर में प्रवेश से पूर्व शुभ मुहूर्त और वैदिक विधि द्वारा वास्तु-शांति एवं मंगल कामना।" },
+        "en": { "title": "Griha Pravesh", "description": "Auspicious housewarming rituals performed at the right muhurat for a peaceful, blessed new beginning." },
+        "image": "/images/griha-pravesh.jpeg",
+        "cta": { "hi": "विस्तार से जानें", "en": "Learn More" }
+      },
+      {
+        "id": "vivah-sanskar",
+        "hi": { "title": "विवाह संस्कार", "description": "पारंपरिक विवाह विधि, वर-वधू के लिए उचित मुहूर्त और संपूर्ण कर्मकांड के साथ।" },
+        "en": { "title": "Vivah Sanskar", "description": "Traditional wedding ceremonies conducted with correct muhurat and complete ritual procedure." },
+        "image": "/images/vivah-sanskar.jpeg",
+        "cta": { "hi": "विस्तार से जानें", "en": "Learn More" }
+      },
+      {
+        "id": "naamkaran",
+        "hi": { "title": "नामकरण", "description": "नवजात शिशु के नामकरण संस्कार, पारंपरिक विधि और परिवार की उपस्थिति में।" },
+        "en": { "title": "Naamkaran", "description": "The naming ceremony for a newborn, conducted with tradition and warmth in the presence of family." },
+        "image": "/images/namkaran.webp",
+        "cta": { "hi": "विस्तार से जानें", "en": "Learn More" }
+      },
+      {
+        "id": "havan-yajna",
+        "hi": { "title": "हवन एवं यज्ञ", "description": "वैदिक मंत्रोच्चार सहित हवन एवं यज्ञ, शुद्धि एवं मंगल कामना के लिए।" },
+        "en": { "title": "Havan & Yajna", "description": "Sacred fire rituals with Vedic chanting, performed for purification and wellbeing." },
+        "image": "/images/hawan.jpeg",
+        "cta": { "hi": "विस्तार से जानें", "en": "Learn More" }
+      },
+      {
+        "id": "shanti-puja",
+        "hi": { "title": "शांति पूजा", "description": "मानसिक एवं पारिवारिक शांति हेतु विशेष पूजा, पूर्ण श्रद्धा एवं विधि के साथ।" },
+        "en": { "title": "Shanti Puja", "description": "A dedicated puja for peace and harmony, performed with full devotion and proper vidhi." },
+        "image": "/images/navagrah.jpeg",
+        "cta": { "hi": "विस्तार से जानें", "en": "Learn More" }
+      },
+      {
+        "id": "rudrabhishek",
+        "hi": { "title": "रुद्राभिषेक", "description": "भगवान शिव की आराधना हेतु रुद्राभिषेक, पारंपरिक वैदिक मंत्रों के साथ सम्पन्न।" },
+        "en": { "title": "Rudrabhishek", "description": "A sacred abhishek dedicated to Lord Shiva, performed with traditional Vedic mantras." },
+        "image": "/images/rudrabhisekh.jpeg",
+        "cta": { "hi": "विस्तार से जानें", "en": "Learn More" }
+      }
+    ]
+  },
+  "jyotish": {
+    "eyebrow": { "hi": "ज्योतिष", "en": "Jyotish" },
+    "title": {
+      "hi": "ज्योतिष को भविष्यवाणी नहीं,\nमार्गदर्शन की दृष्टि से समझें।",
+      "en": "Jyotish, not as prophecy —\nbut as a lens for guidance."
+    },
+    "body": {
+      "hi": "ज्योतिष परामर्श जीवन के महत्वपूर्ण निर्णयों पर पारंपरिक दृष्टिकोण से विचार करने में सहायक होता है। यह पारंपरिक मान्यताओं और व्याख्याओं पर आधारित मार्गदर्शन है, जो आपको अपने निर्णयों में स्पष्टता लाने में सहायता करता है।",
+      "en": "A Jyotish consultation offers a traditional lens through which to reflect on important life decisions. It is guidance rooted in traditional beliefs and interpretation, meant to bring clarity — not certainty — to your choices."
+    },
+    "items": [
+      { "hi": "जन्म कुंडली विश्लेषण", "en": "Birth Chart (Kundli) Analysis" },
+      { "hi": "विवाह मिलान", "en": "Marriage Matching (Kundli Milan)" },
+      { "hi": "मुहूर्त परामर्श", "en": "Muhurat Consultation" },
+      { "hi": "करियर संबंधी ज्योतिषीय मार्गदर्शन", "en": "Career-related Astrological Guidance" },
+      { "hi": "गृह / व्यवसाय संबंधी मुहूर्त", "en": "Home / Business Muhurat" },
+      { "hi": "वार्षिक फलादेश", "en": "Annual Predictions (Varshphal)" }
+    ],
+    "disclaimer": {
+      "hi": "ज्योतिषीय परामर्श पारंपरिक मान्यताओं और व्याख्याओं पर आधारित है। इसे निश्चित भविष्यवाणी या पेशेवर चिकित्सा, कानूनी या वित्तीय सलाह का विकल्प न माना जाए।",
+      "en": "Jyotish consultation is based on traditional beliefs and interpretation. It should not be considered a definite prediction, or a substitute for professional medical, legal or financial advice."
+    }
+  },
+  "process": {
+    "eyebrow": { "hi": "प्रक्रिया", "en": "Process" },
+    "title": { "hi": "कैसे आगे बढ़ें", "en": "How It Works" },
+    "steps": [
+      { "number": "01", "hi": "संपर्क करें", "en": "Get in Touch" },
+      { "number": "02", "hi": "अपनी आवश्यकता बताएं", "en": "Share Your Requirement" },
+      { "number": "03", "hi": "समय एवं विधि तय करें", "en": "Confirm Date & Details" },
+      { "number": "04", "hi": "पूजा / परामर्श सम्पन्न करें", "en": "Ritual / Consultation" }
+    ]
+  },
+  "featured": {
+    "eyebrow": { "hi": "विशेष अनुष्ठान", "en": "Featured Ritual" },
+    "title": { "hi": "शुभ आरंभ,\nविधि और विश्वास के साथ।", "en": "A sacred beginning,\nheld by vidhi and faith." },
+    "body": {
+      "hi": "गृह प्रवेश केवल एक नए घर में प्रवेश नहीं — यह एक नए अध्याय की शुरुआत है। सही मुहूर्त, पूर्ण विधि-विधान और परिवार की उपस्थिति में यह अनुष्ठान आपके नए घर को शुभता और शांति से भर देता है।",
+      "en": "Griha Pravesh is not simply entering a new home — it marks the start of a new chapter. Conducted at the right muhurat, with complete vidhi and your family present, this ritual fills your new home with auspiciousness and calm."
+    },
+    "cta": { "hi": "पूजा के बारे में जानें", "en": "Learn About This Ritual" },
+    "image": "/images/griha-pravesh.jpeg"
+  },
+  "testimonials": {
+    "eyebrow": { "hi": "अनुभव", "en": "Testimonials" },
+    "title": { "hi": "परिवारों के अनुभव", "en": "What Families Say" },
+    "items": [
+  {
+    "name": { "hi": "राकेश शर्मा", "en": "Rakesh Sharma" },
+    "review": {
+      "hi": "पंडित जी ने पूरे विधि-विधान और श्रद्धा के साथ पूजा संपन्न कराई। उनका व्यवहार बहुत सरल और विनम्र है।",
+      "en": "Pandit Ji conducted the पूजा with proper विधि-विधान and devotion. He is very humble and polite."
+    },
+    "rating": 5
+  },
+  {
+    "name": { "hi": "अमित तिवारी", "en": "Amit Tiwari" },
+    "review": {
+      "hi": "गृह प्रवेश की पूजा बहुत अच्छे तरीके से संपन्न हुई। पंडित जी का अनुभव और ज्ञान प्रशंसनीय है।",
+      "en": "The Griha Pravesh Puja was conducted very well. Pandit Ji's experience and knowledge are commendable."
+    },
+    "rating": 5
+  },
+  {
+    "name": { "hi": "सुरेश मिश्रा", "en": "Suresh Mishra" },
+    "review": {
+      "hi": "रुद्राभिषेक और अन्य पूजा विधिवत संपन्न कराई गई। पंडित जी का व्यवहार बहुत अच्छा है।",
+      "en": "The Rudrabhishek and other rituals were performed properly. Pandit Ji is very respectful and kind."
+    },
+    "rating": 5
+  },
+  {
+    "name": { "hi": "विवेक शुक्ला", "en": "Vivek Shukla" },
+    "review": {
+      "hi": "पंडित जी के मार्गदर्शन में अनुष्ठान बहुत अच्छे से संपन्न हुआ। उनका वैदिक ज्ञान काफी प्रभावशाली है।",
+      "en": "The ritual was conducted very well under Pandit Ji's guidance. His knowledge of Vedic traditions is impressive."
+    },
+    "rating": 5
+  }
+]
+  },
+  "faq": {
+    "eyebrow": { "hi": "प्रश्न", "en": "FAQ" },
+    "title": { "hi": "अक्सर पूछे जाने वाले प्रश्न", "en": "Frequently Asked Questions" },
+    "items": [
+      {
+        "hi": { "q": "क्या पूजा घर पर आकर कराई जा सकती है?", "a": "जी हाँ, अधिकांश पूजा एवं संस्कार आपके घर पर आकर सम्पन्न किए जाते हैं। विस्तृत जानकारी के लिए संपर्क करें।" },
+        "en": { "q": "Can the puja be performed at my home?", "a": "Yes, most pujas and sanskars are performed at your home. Please get in touch for details." }
+      },
+      {
+      "hi": {
+    "q": "पूजा के लिए कौन-कौन सी सामग्री चाहिए?",
+    "a": "सामान्य पूजा के लिए फूल, माला, रोली, कुमकुम, अक्षत (चावल), दीपक, घी, धूप, अगरबत्ती, कपूर, कलावा, सुपारी, नारियल, पंचामृत, फल, मिठाई और गंगाजल जैसी सामग्री की आवश्यकता होती है। विशेष अनुष्ठान के लिए आवश्यक अतिरिक्त सामग्री की सूची अलग से साझा की जाती है।"
+  },
+  "en": {
+    "q": "What puja samagri (materials) are required?",
+    "a": "Common puja materials include flowers, garlands, roli, kumkum, rice (akshat), diya, ghee, incense, camphor, kalawa, betel nut, coconut, panchamrit, fruits, sweets, and Gangajal. Additional materials required for specific rituals are shared separately."
+  }
+},
+      {
+        "hi": { "q": "क्या मुहूर्त की जानकारी पहले से ली जा सकती है?", "a": "जी हाँ, शुभ मुहूर्त की जानकारी परामर्श के दौरान पहले से साझा की जाती है।" },
+        "en": { "q": "Can the muhurat be shared in advance?", "a": "Yes, the auspicious muhurat is shared in advance during consultation." }
+      },
+      {
+        "hi": { "q": "ज्योतिष परामर्श कैसे होता है?", "a": "ज्योतिष परामर्श व्यक्तिगत रूप से अथवा फोन/ऑनलाइन माध्यम से, आपकी जन्म-तिथि, समय एवं स्थान के आधार पर किया जाता है।" },
+        "en": { "q": "How does a Jyotish consultation work?", "a": "Consultations are done in person or by phone/online, based on your date, time and place of birth." }
+      },
+      {
+        "hi": { "q": "क्या ऑनलाइन ज्योतिष परामर्श उपलब्ध है?", "a": " — ऑनलाइन परामर्श की उपलब्धता के बारे में संपर्क करके पुष्टि करें।" },
+        "en": { "q": "Is an online Jyotish consultation available?", "a": " — please get in touch to confirm availability of online consultations." }
+      },
+      {
+        "hi": { "q": "पूजा की बुकिंग कितने समय पहले करनी चाहिए?", "a": " — सामान्यतः पूजा की तिथि से कुछ दिन पहले संपर्क करने की सलाह दी जाती है।" },
+        "en": { "q": "How far in advance should I book a puja?", "a": " — it is generally advised to get in touch a few days before your preferred date." }
+      },
+      {
+        "hi": { "q": "क्या विशेष संस्कारों के लिए अलग तैयारी होती है?", "a": "जी हाँ, प्रत्येक संस्कार की अपनी विधि और तैयारी होती है, जिसकी जानकारी परामर्श के समय दी जाती है।" },
+        "en": { "q": "Do special sanskars require separate preparation?", "a": "Yes, each sanskar has its own vidhi and preparation, which is explained during consultation." }
+      }
+    ]
+  },
+  "contactCta": {
+    "title": { "hi": "आपके शुभ अवसर की शुरुआत,\nएक सही विधि से।", "en": "Begin your sacred occasion,\nwith the right vidhi." },
+    "primaryCta": { "hi": "परामर्श के लिए संपर्क करें", "en": "Book a Consultation" },
+    "secondaryCta": { "hi": "WhatsApp पर बात करें", "en": "Chat on WhatsApp" }
+  },
+  "contact": {
+    "eyebrow": { "hi": "संपर्क", "en": "Contact" },
+    "title": { "hi": "संपर्क करें", "en": "Get in Touch" },
+    "description": {
+      "hi": "अपनी पूजा, संस्कार या ज्योतिष परामर्श से संबंधित आवश्यकता साझा करें — हम शीघ्र संपर्क करेंगे।",
+      "en": "Share your requirement for a puja, sanskar or Jyotish consultation — we will get back to you shortly."
+    },
+    "phone": { "label": { "hi": "फ़ोन", "en": "Phone" }, "value": "9140953442 " },
+    "email": { "label": { "hi": "ईमेल", "en": "Email" }, "value": "arvindkumarchaturvedi2@gmail.com" },
+    "whatsapp": { "label": { "hi": "व्हाट्सएप", "en": "WhatsApp" }, "value": "TODO: Replace WhatsApp link." },
+    "address": {
+      "label": { "hi": "पता", "en": "Address" },
+      "value": { "hi": "अकबरपुर, कानपुर देहात, उत्तर प्रदेश — ", "en": "Akbarpur, Kanpur Dehat, Uttar Pradesh ." }
+    },
+    "form": {
+      "name": { "hi": "नाम", "en": "Name" },
+      "phone": { "hi": "मोबाइल नंबर", "en": "Mobile Number" },
+      "service": { "hi": "सेवा चुनें", "en": "Select Service" },
+      "date": { "hi": "वांछित तिथि", "en": "Preferred Date" },
+      "message": { "hi": "संदेश", "en": "Message" },
+      "submit": { "hi": "भेजें", "en": "Submit" }
+    },
+    "mapNote": { "hi": "अकबरपुर, कानपुर देहात", "en": "Akbarpur, Kanpur Dehat" }
+  },
+  "footer": {
+    "about": {
+      "hi": "पारंपरिक वैदिक अनुष्ठान, संस्कार एवं ज्योतिष परामर्श — श्रद्धा और विधि के साथ।",
+      "en": "Traditional Vedic rituals, sanskar and Jyotish consultation — delivered with sincerity and vidhi."
+    },
+    "quickLinksTitle": { "hi": "त्वरित लिंक", "en": "Quick Links" },
+    "servicesTitle": { "hi": "सेवाएँ", "en": "Services" },
+    "contactTitle": { "hi": "संपर्क", "en": "Contact" },
+    "socialTitle": { "hi": "सोशल मीडिया", "en": "Social Media" },
+    "social": [
+      { "id": "facebook", "label": "Facebook", "href": "TODO: Replace with actual social link." },
+      { "id": "instagram", "label": "Instagram", "href": "TODO: Replace with actual social link." },
+      { "id": "youtube", "label": "YouTube", "href": "TODO: Replace with actual social link." }
+    ],
+    "copyright": {
+      "hi": "समस्त अधिकार सुरक्षित।",
+      "en": "All rights reserved."
+    }
+  },
+  "images": {
+    "hero": "/images/hawan.png",
+
+    "about": "/images/about.png",
+
+    "puja": "/images/hero-pandit.jpeg", 
+    
+    "havan": "/images/hero-pandit.jpeg",
+    
+    "jyotish": "/images/jyotish.jpeg",
+    
+    "kundli": "/images/hero-pandit.jpeg",
+    
+    "grihaPravesh": "/images/grihpravesh.jpeg",
+
+    "vivahSanskar": "/images/hero-pandit.jpeg",
+    
+    "rudrabhishek": "/images/hero-pandit.jpeg",
+    
+    "naamkaran": "/images/hero-pandit.jpeg"
+  }
+}
