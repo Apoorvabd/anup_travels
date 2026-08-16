@@ -66,9 +66,11 @@ export default function About() {
             ))}
           </ul>
 
-          <p className="mt-8 border-l-2 border-saffron/40 pl-4 text-sm italic leading-relaxed text-earth/80">
-            {getLocalizedContent(about.credentialsNote, language)}
-          </p>
+          {getLocalizedContent(about.credentialsNote, language) && (
+            <p className="mt-8 border-l-2 border-saffron/40 pl-4 text-sm italic leading-relaxed text-earth/80">
+              {getLocalizedContent(about.credentialsNote, language)}
+            </p>
+          )}
 
           <div className="mt-10 grid grid-cols-3 gap-6 border-t border-earth/15 pt-8">
             {about.stats.map((stat, i) => (

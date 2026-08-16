@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { MapPin, Phone, Mail, MessageCircle, Send } from "lucide-react";
+import { MapPin, Phone, Mail, MessageCircle, Send, ArrowUpRight } from "lucide-react";
 import { FaFacebookF, FaInstagram, FaYoutube } from "react-icons/fa";
 import { useLanguage, getLocalizedContent } from "@/hooks/useLanguage";
 import content from "@/data/siteContent.json";
@@ -52,7 +52,18 @@ export default function ContactFooter() {
               className="flex flex-col gap-8"
             >
               <ContactRow icon={MapPin} label={getLocalizedContent(contact.address.label, language)}>
-                {getLocalizedContent(contact.address.value, language)}
+                {contact.mapUrl ? (
+                  <a
+                    href={contact.mapUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="link-underline hover:text-saffron"
+                  >
+                    {getLocalizedContent(contact.address.value, language)}
+                  </a>
+                ) : (
+                  getLocalizedContent(contact.address.value, language)
+                )}
               </ContactRow>
               <ContactRow icon={Phone} label={getLocalizedContent(contact.phone.label, language)}>
                 {contact.phone.value}
@@ -64,14 +75,43 @@ export default function ContactFooter() {
                 {contact.whatsapp.value}
               </ContactRow>
 
-              <div className="mt-2 flex aspect-[4/3] w-full items-center justify-center rounded-sm border border-earth/20 bg-cream">
-                <div className="flex flex-col items-center gap-2 text-center">
-                  <MapPin className="h-6 w-6 text-saffron" strokeWidth={1.5} />
-                  <p className="text-sm font-medium text-earth">
-                    {getLocalizedContent(contact.mapNote, language)}
-                  </p>
+              {contact.mapEmbedUrl ? (
+                <div className="mt-2 overflow-hidden rounded-sm border border-earth/20">
+                  <div className="relative aspect-[4/3] w-full">
+                    <iframe
+                      src={contact.mapEmbedUrl}
+                      title={getLocalizedContent(contact.mapNote, language)}
+                      className="absolute inset-0 h-full w-full border-0"
+                      loading="lazy"
+                      referrerPolicy="no-referrer-when-downgrade"
+                      allowFullScreen
+                    />
+                  </div>
+                  {contact.mapUrl && (
+                    <a
+                      href={contact.mapUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group flex items-center justify-between bg-cream px-4 py-3 text-xs font-medium uppercase tracking-widest2 text-saffron transition-colors duration-300 hover:bg-cream/70"
+                    >
+                      {language === "hi" ? "Google Maps में खोलें" : "Open in Google Maps"}
+                      <ArrowUpRight
+                        size={14}
+                        className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                      />
+                    </a>
+                  )}
                 </div>
-              </div>
+              ) : (
+                <div className="mt-2 flex aspect-[4/3] w-full items-center justify-center rounded-sm border border-earth/20 bg-cream">
+                  <div className="flex flex-col items-center gap-2 text-center">
+                    <MapPin className="h-6 w-6 text-saffron" strokeWidth={1.5} />
+                    <p className="text-sm font-medium text-earth">
+                      {getLocalizedContent(contact.mapNote, language)}
+                    </p>
+                  </div>
+                </div>
+              )}
             </motion.div>
 
             <motion.form

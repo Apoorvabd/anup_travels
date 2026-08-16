@@ -309,12 +309,12 @@
         "en": { "q": "How does a Jyotish consultation work?", "a": "Consultations are done in person or by phone/online, based on your date, time and place of birth." }
       },
       {
-        "hi": { "q": "क्या ऑनलाइन ज्योतिष परामर्श उपलब्ध है?", "a": " — ऑनलाइन परामर्श की उपलब्धता के बारे में संपर्क करके पुष्टि करें।" },
-        "en": { "q": "Is an online Jyotish consultation available?", "a": " — please get in touch to confirm availability of online consultations." }
+        "hi": { "q": "क्या ऑनलाइन ज्योतिष परामर्श उपलब्ध है?", "a": "जी हाँ, ऑनलाइन परामर्श की उपलब्धता के बारे में संपर्क करके पुष्टि करें।" },
+        "en": { "q": "Is an online Jyotish consultation available?", "a": "Yes — please get in touch to confirm availability of online consultations." }
       },
       {
-        "hi": { "q": "पूजा की बुकिंग कितने समय पहले करनी चाहिए?", "a": " — सामान्यतः पूजा की तिथि से कुछ दिन पहले संपर्क करने की सलाह दी जाती है।" },
-        "en": { "q": "How far in advance should I book a puja?", "a": " — it is generally advised to get in touch a few days before your preferred date." }
+        "hi": { "q": "पूजा की बुकिंग कितने समय पहले करनी चाहिए?", "a": "सामान्यतः पूजा की तिथि से कुछ दिन पहले संपर्क करने की सलाह दी जाती है।" },
+        "en": { "q": "How far in advance should I book a puja?", "a": "It is generally advised to get in touch a few days before your preferred date." }
       },
       {
         "hi": { "q": "क्या विशेष संस्कारों के लिए अलग तैयारी होती है?", "a": "जी हाँ, प्रत्येक संस्कार की अपनी विधि और तैयारी होती है, जिसकी जानकारी परामर्श के समय दी जाती है।" },
@@ -334,12 +334,12 @@
       "hi": "अपनी पूजा, संस्कार या ज्योतिष परामर्श से संबंधित आवश्यकता साझा करें — हम शीघ्र संपर्क करेंगे।",
       "en": "Share your requirement for a puja, sanskar or Jyotish consultation — we will get back to you shortly."
     },
-    "phone": { "label": { "hi": "फ़ोन", "en": "Phone" }, "value": "9140953442 " },
+    "phone": { "label": { "hi": "फ़ोन", "en": "Phone" }, "value": "9140953442" },
     "email": { "label": { "hi": "ईमेल", "en": "Email" }, "value": "arvindkumarchaturvedi2@gmail.com" },
     "whatsapp": { "label": { "hi": "व्हाट्सएप", "en": "WhatsApp" }, "value": "TODO: Replace WhatsApp link." },
     "address": {
       "label": { "hi": "पता", "en": "Address" },
-      "value": { "hi": "अकबरपुर, कानपुर देहात, उत्तर प्रदेश — ", "en": "Akbarpur, Kanpur Dehat, Uttar Pradesh ." }
+      "value": { "hi": "अकबरपुर, कानपुर देहात, उत्तर प्रदेश (TODO: भवन संख्या / गली / लैंडमार्क जोड़ें)", "en": "Akbarpur, Kanpur Dehat, Uttar Pradesh (TODO: add house no. / street / landmark)" }
     },
     "form": {
       "name": { "hi": "नाम", "en": "Name" },
@@ -349,7 +349,9 @@
       "message": { "hi": "संदेश", "en": "Message" },
       "submit": { "hi": "भेजें", "en": "Submit" }
     },
-    "mapNote": { "hi": "अकबरपुर, कानपुर देहात", "en": "Akbarpur, Kanpur Dehat" }
+    "mapNote": { "hi": "अकबरपुर, कानपुर देहात", "en": "Akbarpur, Kanpur Dehat" },
+    "mapUrl": "https://maps.app.goo.gl/2LhaW58kfwLEsPXY7",
+    "mapEmbedUrl": "https://www.google.com/maps?q=26.367988,79.955284&z=15&output=embed"
   },
   "footer": {
     "about": {
@@ -361,9 +363,9 @@
     "contactTitle": { "hi": "संपर्क", "en": "Contact" },
     "socialTitle": { "hi": "सोशल मीडिया", "en": "Social Media" },
     "social": [
-      { "id": "facebook", "label": "Facebook", "href": "TODO: Replace with actual social link." },
+      { "id": "facebook", "label": "Facebook", "href": "https://www.facebook.com/arvindkumar.chaturvedi.75" },
       { "id": "instagram", "label": "Instagram", "href": "TODO: Replace with actual social link." },
-      { "id": "youtube", "label": "YouTube", "href": "TODO: Replace with actual social link." }
+      { "id": "youtube", "label": "YouTube", "href": "https://www.youtube.com/@indurukhshreeshivsarovardh9657" }
     ],
     "copyright": {
       "hi": "समस्त अधिकार सुरक्षित।",

@@ -16,7 +16,10 @@ export default function Hero() {
   const showEmail = email && !email.startsWith("TODO");
 
   return (
-    <section id="home" className="relative flex min-h-screen items-end overflow-hidden bg-charcoal">
+    <section
+      id="home"
+      className="relative flex min-h-[100svh] items-end overflow-hidden bg-charcoal sm:min-h-screen"
+    >
       <div className="absolute inset-0">
         <Image
           src={images.hero}
@@ -24,13 +27,13 @@ export default function Hero() {
           fill
           priority
           sizes="100vw"
-          className="object-cover"
+          className="object-cover object-[80%_18%] sm:object-[70%_28%] lg:object-center"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/50 to-charcoal/20" />
         <div className="absolute inset-0 bg-charcoal/10" />
       </div>
 
-      <div className="relative z-10 mx-auto w-full max-w-7xl px-5 pb-20 pt-40 sm:px-8 sm:pb-28 lg:px-12 lg:pb-32">
+      <div className="relative z-10 mx-auto w-full max-w-7xl px-5 pb-14 pt-32 sm:px-8 sm:pb-28 sm:pt-40 lg:px-12 lg:pb-32">
         <motion.p
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
@@ -82,7 +85,7 @@ export default function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 0.6 }}
-          className="mt-14 flex flex-col gap-4 border-t border-ivory/15 pt-6 sm:flex-row sm:items-center sm:gap-8"
+          className="mt-10 flex flex-col gap-4 border-t border-ivory/15 pt-6 sm:mt-14 sm:flex-row sm:items-center sm:gap-8"
         >
           <p className="text-xs font-medium uppercase tracking-widest2 text-ivory/50">
             {getLocalizedContent(hero.trustLine, language)}

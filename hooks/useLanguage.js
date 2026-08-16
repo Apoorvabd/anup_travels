@@ -13,8 +13,12 @@ export function LanguageProvider({ children }) {
   const [language, setLanguage] = useState("hi");
 
   useEffect(() => {
+    // localStorage isn't available during SSR, so the stored preference can
+    // only be read post-mount — this one-time sync is the standard pattern
+    // for restoring a client-only value after hydration.
     const stored = window.localStorage.getItem(STORAGE_KEY);
     if (stored === "en" || stored === "hi") {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setLanguage(stored);
     }
   }, []);
