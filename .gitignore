@@ -6,6 +6,9 @@ out/
 build/
 next-env.d.ts
 
+# Netlify
+.netlify/
+
 # misc
 .DS_Store
 *.log
