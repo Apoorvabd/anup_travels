@@ -16,15 +16,34 @@ const SOCIAL_ICONS = {
 export default function ContactFooter() {
   const { language } = useLanguage();
   const { contact, footer, navigation, services, brand } = content;
-  const [submitted, setSubmitted] = useState(false);
+  const [status, setStatus] = useState("idle"); // idle | submitting | success | error
 
-  // NOTE: Wire this up to the client's own EmailJS / backend service before
-  // going live. Intentionally left as a no-op so private business
-  // credentials are never hardcoded into a reusable template component.
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setSubmitted(true);
-    e.target.reset();
+    const form = e.target;
+    const data = new FormData(form);
+    const payload = {
+      name: data.get("name"),
+      phone: data.get("phone"),
+      service: data.get("service"),
+      date: data.get("date"),
+      message: data.get("message"),
+      language,
+    };
+
+    setStatus("submitting");
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+      if (!res.ok) throw new Error("Request failed");
+      setStatus("success");
+      form.reset();
+    } catch {
+      setStatus("error");
+    }
   };
 
   return (
@@ -156,17 +175,29 @@ export default function ContactFooter() {
 
               <button
                 type="submit"
-                className="mt-2 flex items-center justify-center gap-2 rounded-full bg-charcoal px-6 py-3.5 text-[13px] font-medium uppercase tracking-widest2 text-ivory transition-colors duration-300 hover:bg-saffron"
+                disabled={status === "submitting"}
+                className="mt-2 flex items-center justify-center gap-2 rounded-full bg-charcoal px-6 py-3.5 text-[13px] font-medium uppercase tracking-widest2 text-ivory transition-colors duration-300 hover:bg-saffron disabled:cursor-not-allowed disabled:opacity-60"
               >
-                {getLocalizedContent(contact.form.submit, language)}
+                {status === "submitting"
+                  ? language === "hi"
+                    ? "भेजा जा रहा है..."
+                    : "Sending..."
+                  : getLocalizedContent(contact.form.submit, language)}
                 <Send size={15} />
               </button>
 
-              {submitted && (
+              {status === "success" && (
                 <p className="text-sm text-saffron" role="status">
                   {language === "hi"
                     ? "धन्यवाद, हम शीघ्र संपर्क करेंगे।"
                     : "Thank you, we will get back to you shortly."}
+                </p>
+              )}
+              {status === "error" && (
+                <p className="text-sm text-red-600" role="alert">
+                  {language === "hi"
+                    ? "क्षमा करें, कुछ गड़बड़ हुई। कृपया फिर से प्रयास करें या सीधे फ़ोन/WhatsApp पर संपर्क करें।"
+                    : "Sorry, something went wrong. Please try again or contact us directly by phone/WhatsApp."}
                 </p>
               )}
             </motion.form>
